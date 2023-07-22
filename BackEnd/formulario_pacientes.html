@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <title>Formulario Pacientes</title>
+    </head>
+    <body>
+        <h1>Formulario Pacientes</h1>
+        <header>Información de Pacientes</header>
+        <form action="bdpcte.php" method="post" class="formularios" id="formulariop" name="formulario" onsubmit="return validarFormularioPte()">
+            <ul>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre_pte" name="nombre_pte" placeholder="Nombre" required>
+            </ul>
+            <ul>
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido_pte" name="apellido_pte" placeholder="Apellido" required>
+            </ul>
+            <ul>
+                <label for="cedula">Número de Cédula</label>
+                <input type="number" id="cedula_pte" name="cedula_pte" placeholder="123456789" required>
+            </ul>
+            <ul>
+                <label for="edad">Edad</label>
+                <input type="number" id="edad_pte" name="edad_pte" placeholder="18" required>
+            </ul>
+            <ul>
+                <label for="telefono">Teléfono</label>
+                <input type="number" id="telefono_pte" name="telefono_pte" placeholder="3130030003" required>
+            </ul>
+            <ul>
+                <label for="especialidad">Especialidad</label>
+                <select name="especialidad_pte" id="especialidad_pte">
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="dermatologia">Dermatología</option>
+                    <option value="medicina_interna">Medicina Interna</option>
+                    <option value="medicina_general" selected>Medicina General</option>
+                    <option value="odontologia">Odontología</option>
+                    <option value="psicologia">Psicología</option>
+                    <option value="radiologia">Radiología</option>
+                    <option value="rehabilitacion_fisica">Rehabilitación Física</option>
+                </select>
+            </ul>
+            <ul>
+                <button type="submit">Enviar</button>
+                <button type="reset" id="reset" onclick="limpiar()">Reiniciar</button>
+            </ul>
+        </form>
+        <script src="formularios.JS"></script>
+        <h3>Datos Pacientes:</h3>
+        <ol id="showPaciente"></ol><br>
+    </body>
+</html>

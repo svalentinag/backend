@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+    <head>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <title>Formulario Doctores</title>
+    </head>
+    <body>
+        <h1>Formulario Doctores</h1>
+        <header>Información de Doctores</header><br>
+        <form action="basedatos.php" class="formularios" method="post" id="formularios" onsubmit="return validarFormularioDoc()">
+            <ul>
+                <label for="nombre_doc">Nombre</label>
+                <input type="text" id="nombre_doc" name="nombre_doc" placeholder="Nombre" required>
+            </ul>
+            <ul>
+                <label for="apellido_doc">Apellido</label>
+                <input type="text" id="apellido_doc" name="apellido_doc" placeholder="Apellido" required>
+            </ul>
+            <ul>
+                <label for="cedula_doc">Número de Cédula</label>
+                <input type="number" id="cedula_doc" name="cedula_doc" placeholder="123456789" required>
+            </ul>
+            <ul>
+                <label for="especialidad_doc">Especialidad</label>
+                <select name="especialidad_doc" id="especialidad_doc">
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="dermatologia">Dermatología</option>
+                    <option value="medicina_interna">Medicina Interna</option>
+                    <option value="medicina_general" selected>Medicina General</option>
+                    <option value="odontologia">Odontología</option>
+                    <option value="psicologia">Psicología</option>
+                    <option value="radiologia">Radiología</option>
+                    <option value="rehabilitacion_fisica">Rehabilitación Física</option>>
+                </select>
+            </ul>
+            <ul>
+                <label for="consultorio_doc">Consultorio</label>
+                <input type="text" id="consultorio_doc" name="consultorio_doc" placeholder="103B" required>
+            </ul>
+            <ul>
+                <label for="email_doc">Correo Electronico</label>
+                <input type="email" id="email_doc" name="email_doc" placeholder="example@email.com" required>
+            </ul>
+            <ul>
+                <button type="submit" id="button" name="submit">Enviar</button>
+                <button type="reset" id="reset" onclick="limpiar()">Reiniciar</button>
+            </ul>
+        </form>
+        <script src="formularios.JS"></script>
+        <h3>Datos Doctores:</h3>
+        <ol id="showDoctor"></ol><br>
+    </body>
+</html>

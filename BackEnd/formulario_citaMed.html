@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+    <head>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <title>Formulario Cita Medica</title>
+    </head>
+    <body>
+        <h1>Formulario Cita Medica</h1>
+        <header>Información de Citas Medicas</header><br>
+        <form action="#" class="formularios" method="post" id="formularioCM" onsubmit="return validarFormularioCita()">
+            <ul>
+                <label for="cedula_cM">Número de Cédula del Paciente</label>
+                <input type="number" id="cedula_cM" name="cedula_cM" placeholder="123456789" required>
+            </ul>
+            <ul>
+                <label for="especialidad_doc">Especialidad</label>
+                <select name="especialidad_doc" id="especialidad_cM">
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="dermatologia">Dermatología</option>
+                    <option value="medicina_interna">Medicina Interna</option>
+                    <option value="medicina_general" selected>Medicina General</option>
+                    <option value="odontologia">Odontología</option>
+                    <option value="psicologia">Psicología</option>
+                    <option value="radiologia">Radiología</option>
+                    <option value="rehabilitacion_fisica">Rehabilitación Física</option>>
+                </select>
+            </ul>
+            <ul>
+                <button type="submit" id="button">Enviar</button>
+                <button type="reset" id="reset" onclick="limpiar()">Reiniciar</button>
+            </ul>
+        </form>
+        <script src="formularios.JS"></script>
+        <h3>Datos Cita Medica:</h3>
+        <ol id="showCitaMed"></ol><br>
+    </body>
+</html>
